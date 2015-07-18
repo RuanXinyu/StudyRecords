@@ -1,10 +1,17 @@
-两个数和问题.
+1. Two Sum
 ===
 ### 问题描述
-> 给你一个整形数组a和一个整数b，选出数组a中的两个数，使其和等于b，假设只有一组满足条件，并且不考虑大整形问题, 返回int数组，内存由外部释放。
+> Given an array of integers, find two numbers such that they add up to a specific target number.
+
+> The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.
+
+> You may assume that each input would have exactly one solution.
+
+> **Input**: `numbers={2, 7, 11, 15}, target=9`
+> **Output**: `index1=1, index2=2` 
 
 ### 解决方案
-+ 暴力型的，当然也是最次的，遍历
++ 暴力型遍历，当然也是最次的，leetcode上显示超时
 ```cpp
 int* twoSum(int* nums, int numsSize, int target) {
     int *result = (int *)malloc(2 * sizeof(int));
