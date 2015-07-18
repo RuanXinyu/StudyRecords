@@ -28,6 +28,7 @@ int* twoSum(int* nums, int numsSize, int target) {
     return NULL;
 }
 ```
+
 + 通过map实现，复杂度为Nlog（N），因为红黑树时NLog(N)的
 ```cpp
 vector<int> twoSum(vector<int>& nums, int target) {
@@ -46,5 +47,6 @@ vector<int> twoSum(vector<int>& nums, int target) {
         return result;
     }
 ```
+
 ### 扩展
 > 如果数组为有序的，则不需要通过map实现，直接一边从头遍历，一边从尾部遍历即可。
