@@ -8,7 +8,8 @@
 > You may assume that each input would have exactly one solution.
 
 > **Input**: `numbers={2, 7, 11, 15}, target=9`
-> **Output**: `index1=1, index2=2` 
+> **Output**: `index1=1, index2=2`
+
 
 ### 解决方案
 + 暴力型遍历，当然也是最次的，leetcode上显示超时
@@ -32,20 +33,20 @@ int* twoSum(int* nums, int numsSize, int target) {
 + 通过map实现，复杂度为Nlog（N），因为红黑树时NLog(N)的
 ```cpp
 vector<int> twoSum(vector<int>& nums, int target) {
-        vector<int> result;
-        map<int, int> hmap;
-        for (int i = 0; i < nums.size(); i++) {
-            if (hmap.count(target - nums[i])) {
-                result.push_back(hmap[target - nums[i]] + 1);
-                result.push_back(i + 1);
-                return result;
-            }
-            if (!hmap.count(nums[i])) {
-               hmap.insert(pair<int, int>(nums[i], i)); 
-            }
+    vector<int> result;
+    map<int, int> hmap;
+    for (int i = 0; i < nums.size(); i++) {
+        if (hmap.count(target - nums[i])) {
+            result.push_back(hmap[target - nums[i]] + 1);
+            result.push_back(i + 1);
+            return result;
         }
-        return result;
+        if (!hmap.count(nums[i])) {
+           hmap.insert(pair<int, int>(nums[i], i)); 
+        }
     }
+    return result;
+}
 ```
 
 ### 扩展

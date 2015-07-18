@@ -6,5 +6,5 @@
 + [面试经历记录](./面试/面试经历记录.md)
 
 ##### 算法
-+ [LeetCode](./算法/LeetCode/LeetCode总章.md)
-+ [链表](./算法/链表/链表总章.md)
++ [LeetCode](./算法/LeetCode/README.md)
++ [链表](./算法/链表/README.md)
