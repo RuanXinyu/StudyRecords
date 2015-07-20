@@ -42,7 +42,7 @@ vector<int> twoSum(vector<int>& nums, int target) {
             return result;
         }
         if (!hmap.count(nums[i])) {
-           hmap.insert(pair<int, int>(nums[i], i)); 
+            hmap.insert(pair<int, int>(nums[i], i));
         }
     }
     return result;
