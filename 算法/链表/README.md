@@ -1,6 +1,6 @@
 链表算法题目
 ====
-### 题目列表
+## 题目列表
 + [将单链表反转](单链表反转.md)
 + [查找单链表中的倒数第K个结点](单链表中的倒数第K个结点.md)
 + [查找单链表的中间结点](单链表的中间结点.md)
@@ -12,8 +12,8 @@
 + [已知一个单链表中存在环，求进入环中的第一个节点](进入环型链表的第一个节点.md)
 + [给出一单链表头指针pHead和一节点指针pToBeDeleted，O(1)时间复杂度删除节点pToBeDeleted](删除链表指定节点.md)
 
-### 基础函数
-##### 函数声明
+## 基础函数
+#### 函数声明
 + [typedef struct Node；]()
 + [void List_Init(Node nodeList[], int count, int baseVal = 0)；]()
 + [void List_InitLoop(Node nodeList[], int count, int loopNodeIndex, int baseVal = 0)；]()
@@ -21,7 +21,7 @@
 + [string List_GetSequenceString(int start, int end, int step)；]()
 
 
-##### 函数实现
+#### 函数实现
 ```cpp
 typedef struct Node {
     int value;
