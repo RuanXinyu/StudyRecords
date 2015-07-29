@@ -57,3 +57,8 @@ accept/pthread_create模型，有新客户来时创建一个服务线程而不�
 1. 阻塞信号集初始化为空集(译者注：原文此处不明确，译文根据fork函数手册页稍做修改)
 1. 不继承由timer_create函数创建的计时器
 10. 不继承异步输入和输出
+
+#### 互斥量与临界区的区别？
+1. Mutexes 操作要比 Critical Section 费时的多。
+2. Mutexes 可以跨进程使用，Critical Section 则只能在同一进程中使用。
+3. 等待一个 Mutex 时，你可以指定"结束等待"的时间长度，而 Critical Section 则不行。
