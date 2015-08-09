@@ -29,36 +29,36 @@ C/C++基础知识
 + 编写派生类的赋值函数时注意不要忘记对基类的数据成员进行重新赋值，可以通过`Base::operator=(other)`方式，因为不能直接操作积累的私有数据成员
 
 
-##### 常用关键字
-####### const与define的区别
+#### 常用关键字
+###### const与define的区别
 const有数据类型，编译器可以进行类型检查，同时支持调试
 
-####### nullptr与NULL的区别
+###### nullptr与NULL的区别
 C/C\++中关于NULL的定义为： `注：nullptr为C++11特性`
 ```cpp
 #ifdef __cplusplus #define NULL 0 #else #define NULL ((void *)0) #endif
 ```
 C++中是不可以将void*隐形转化为其他类型的指针的，所以定义为0，但是因为0是整数，所以在函数重载时可能会出现问题。
 
-####### static
+###### static
 + static可以修饰全局变量，局部变量，函数，成员变量，成员函数。
 + static修饰函数和全局变量可以限制函数和变量在当前文件内有效
 + 静态的数据成员必须初始化，并且在类外初始化，并且初始化的时候是没有static关键字的，为什么这样呢，因为static成员变量在类中是声明而不是定义，而类外的才算定义。
 + const static 类型的**整形**的成员变量才可以在类中初始化
 
-####### extern
+###### extern
 extern可以修饰变量，也可以实现C与C++的混用，参见 "[C\+\+项目中的extern "C" {}"](http://www.cnblogs.com/skynet/archive/2010/07/10/1774964.html)
 
-####### malloc/free与new/delete的区别
+###### malloc/free与new/delete的区别
 + new/delete会调用构造函数和析构函数
 + new/delete为运算符，而malloc/free为函数
 
-####### this
+###### this
 + this是不同对象共享相同成员函数的保证
 + this指针的本质是一个函数参数，只是被编译器隐藏了，因此不占用对象的空间
 + 静态成员函数不可以使用this指针
 
-####### inline
+###### inline
 + inline具备宏定义代码的效率
 + inline会进行类型检查和自动类型转换，因此更加安全
 + inline函数可以是成员函数，this对象会被放在合适的地方，因此可以自由的操作类的成员数据
