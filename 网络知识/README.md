@@ -1,4 +1,4 @@
-网络基础知识
+ioctl网络基础知识
 ====
 ## 知识列表
 #### 介绍TCP连接的三次握手
@@ -51,13 +51,13 @@
 
 #### socket编程
 ###### 函数
-+ fcntl, ioctl, connect, bind, listen, accept， select， poll， epoll， setsockopt
++ fcntl, ioctlsocket, connect, bind, listen, accept， select， poll， epoll， setsockopt
 + send, sendto, sendmsg, write, writev
 + recv, recvfrom, recvmsg, read, readv
 
 ###### 描述
-+ 可以通过fcntl, ioctl将socket设置为非阻塞模式，通过轮询或者select进行收发数据
-+ 如果想给connect设置超时可以先将socket设置为非阻塞模式，通过setsockopt设置超时时间，然后通过select查询是否连接成功，最后根据实际需要来决定是不是需要将socket设置为非阻塞模式
++ 可以通过fcntl, ioctlsocket将socket设置为非阻塞模式，通过setsockopt设置超时时间，通过轮询或者select进行收发数据
++ 如果想给connect设置超时可以先通过将socket设置为非阻塞模式，通过setsockopt设置超时时间，然后通过select查询是否连接成功，最后根据实际需要来决定是不是需要将socket设置为非阻塞模式
 
 
 #### 常见网络攻击
