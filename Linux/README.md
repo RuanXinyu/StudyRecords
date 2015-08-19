@@ -4,7 +4,8 @@ Linux 基础知识
 #### 零散知识点
 + linux内核锁有：原子锁，自旋锁和信号量
 + 内核调度时机有自愿调度和非自愿调度，自愿调度表示调用exit，sleep函数什么的，非自愿表示时间片用完
-+ linux申请内存的方式有：malloc， kmalloc, vmalloc
++ linux申请内存的方式有：malloc， calloc, realloc, kmalloc, vmalloc (kmalloc保证分配的内存在物理上是连续的,vmalloc保证的是在虚拟地址空间上的连续)
++ 登录linux,首先启动/etc/profile,然后启动用户目录下的.bash_profile, .bash_login和.profile中的一个, 如果是.bash_profile的话还会执行bashrc; 每次启动shell终端的时候都会调用/etc/bashrc和~/.bashrc文件
 
 #### GDB常见指令
 file：加载， r：运行， c：继续， b[行号]：设置断点， d：删除断点， s：下一步， n：下一行， p：打印变量值， i：显示各类信息， q：退出
@@ -41,7 +42,7 @@ accept/pthread_create模型，有新客户来时创建一个服务线程而不�
 
 #### 线程如何实现同步，进程如何实现通信?
 + **线程：**互斥锁，读写锁，条件变量，信号量
-+ **进程：**管道，有名管道，信号，信号量，消息队列，共享内存，套接字
++ **进程：**管道，有名管道，信号，信号量，消息队列，共享内存，套接字, "文件与记录锁"
 
 #### 进程间切换的步骤：
 进程切换需要切换虚拟空间、内核栈、cpu寄存器、内核空间的切换。
