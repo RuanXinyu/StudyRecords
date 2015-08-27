@@ -23,6 +23,21 @@
 
 
 ## 函数实现
+### 二分查找
+```cpp
+int bSearch(int begin, int end, int e) {
+    int mid, left = begin, right = end;
+    while(left <= right) { // 这儿必须时<=, 否则单个元素会出错
+        mid = (left + right) >> 1;
+        // 有=表示取最左符合条件的数, 否则取最右符合条件的数
+        if(num[mid] >= e) right = mid - 1;
+        else left = mid + 1;
+    }
+    // 如果没有符合条件的数,则left表示返回右边与其接近的数的位置, right表示返回左边与其接近的数的位置
+    return left;
+}
+```
+
 ### 冒泡排序
 ```cpp
 void bubble_sort(int *ptr, int length) {
