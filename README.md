@@ -13,9 +13,6 @@
 + [排序算法](./算法/排序算法/README.md)
 
 #### C/C++基础
-
-fsfsfsd``JDK``fsfsfs
-
 + [零散知识](./C++/README.md)
 + [STL](./C++/STL.md)
 + [虚函数知识](./C++/虚函数知识.md)
